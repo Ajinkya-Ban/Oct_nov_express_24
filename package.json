@@ -1,0 +1,19 @@
+{
+  "name": "my-express-app1",
+  "version": "1.0.0",
+  "description": "This is the first test app for checking express is working or not",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Ajinkya Ban",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.10"
+  }
+}
