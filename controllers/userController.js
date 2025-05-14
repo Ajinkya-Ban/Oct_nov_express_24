@@ -1,6 +1,15 @@
 const db = require("../dbconfig/db");
+const { validationResult } = require("express-validator");
 
 const addNewUser = (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({
+      success: false,
+      errors: errors.array(),
+    });
+  }
+
   const { uname, age, email, mobile, uadd } = req.body;
   const insert_query =
     "insert into users(uname, age, email, mobile, uadd) values(?,?,?,?,?)";
